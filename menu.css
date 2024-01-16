@@ -1,0 +1,184 @@
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto.ttf');
+}
+
+@font-face {
+    font-family: Signatrue;
+    src: url('Signatrue.ttf');
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url('BebasNeue.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+/* header */
+header {
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #333;
+    position: absolute;
+    margin: 50px 0 0 95px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+header a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+header a:hover::after {
+    width: 100%;
+    text-decoration: underline;
+}
+
+/* veículo */
+.menu1 {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    height: 375px;
+    border: 2px solid #333;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px;
+    left: 100px;
+    z-index: -1;
+}
+
+.texto1 {
+    display: flex;
+    position: absolute;
+    font-family: 'BebasNeue';
+    font-size: 100px;
+    letter-spacing: 10px;
+    width: 350px;
+    height: 300px;
+    left: 220px;
+    bottom: 130px;
+}
+
+.texto1 a {
+    text-decoration: none;
+    color: #333;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu1 img {
+    display: flex;
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    right: 45px;
+    bottom: 70px;
+}
+
+/* bancos */
+.menu2 {
+display: flex;
+position: absolute;
+width: 80%;
+height: 375px;
+border: 2px solid #333;
+justify-content: center;
+align-content: center;
+margin-top: 500px;
+left: 100px;
+z-index: -1;
+}
+
+.texto2 {
+    display: flex;
+    font-family: 'BebasNeue';
+    font-size: 100px;
+    letter-spacing: 10px;
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    left: 220px;
+    top: 625px;
+}
+
+.texto2 a {
+    text-decoration: none;
+    color: #333;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu2 img {
+    display: flex;
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+}
+
+/* motores */
+.menu3 {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    height: 375px;
+    border: 2px solid #333;
+    justify-content: center;
+    align-content: center;
+    margin-top: 900px;
+    left: 100px;
+    z-index: -1;
+}
+
+.texto3 {
+    display: flex;
+    font-family: 'BebasNeue';
+    font-size: 100px;
+    letter-spacing: 10px;
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    left: 220px;
+    top: 1025px;
+}
+
+.texto3 a {
+    text-decoration: none;
+    color: #333;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu3 img {
+    display: flex;
+    width: 400px;
+    height: 25 0px;
+    position: absolute;
+    right: 45px;
+    bottom: 70px;
+}

@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto.ttf');
+}
+
+@font-face {
+    font-family: Signatrue;
+    src: url('Signatrue.ttf');
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url('BebasNeue.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+header {
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #333;
+    position: absolute;
+    margin: 50px 0 0 95px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+header a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+header a:hover::after {
+    width: 100%;
+    text-decoration: underline;
+}

@@ -1,0 +1,150 @@
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto.ttf');
+}
+
+@font-face {
+    font-family: Signatrue;
+    src: url('Signatrue.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+header {
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #333;
+    position: absolute;
+    margin: 70px 0 0 95px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+header a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+header a:hover::after {
+    width: 100%;
+    text-decoration: underline;
+}
+
+.menu {
+    position: relative;
+    height: 100%;
+    margin: -15px auto;
+}
+
+.bmw-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.bmw {
+    margin-right: 250px;
+}
+
+.titulobmw {
+    font-family: 'Signatrue';
+    font-size: 16px;
+    margin-left: 220px;
+    padding-top: 50px;
+}
+
+.quadradoazul {
+    width: 25%;
+    height: 450px;
+    position: absolute;
+    right: 150px;
+    margin-top: 65px;
+    background-color: blue;
+    border-radius: 20px 5px 35px 250px;
+    z-index: -1;
+}
+
+ #logo {
+    width: 200px;
+    height: 200px;
+    margin-top: 255px;
+    position: absolute;
+    right: 190px;
+    z-index: 1;
+    align-items: end;
+ }
+
+ .textobmw p {
+    display: flex;
+    position: absolute;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: bold;
+    align-content: flex-end;
+    align-items: center;
+    z-index: auto;
+    margin: 275px 0 0 100px;
+    width: 50%;
+    height: 250px;
+    text-align: left;
+ }
+
+ .slidesbolinha {
+    position: relative;
+    display: flex;
+    top: 555px;
+    left: 75%;
+    width: 55px;
+    cursor: default;
+}
+
+ .slidesbolinha input[type="radio"]:before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.slidesbolinha input[id="radio1"]:checked:before {
+    background-color: blue;
+}
+
+.slidesbolinha input[id="radio2"]:checked:before {
+    background-color: rebeccapurple;
+}
+
+.slidesbolinha input[id="radio3"]:checked:before {
+    background-color: green;
+}
+
+.slidesbolinha input[id="radio4"]:checked:before {
+     background-color: yellow;
+}

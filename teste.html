@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veículos Slideshow</title>
+    <style>
+        @font-face {
+            font-family: Roboto;
+            src: url('Roboto.ttf');
+        }
+
+        @font-face {
+            font-family: Signature;
+            src: url('Signature.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightgrey;
+        }
+
+        header {
+            font-size: 14px;
+            font-family: 'Roboto';
+            color: #333;
+            position: absolute;
+            margin: 70px 0 0 95px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        header a {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        header a::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: #333;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.5s ease-in-out;
+        }
+
+        header a:hover::after {
+            width: 100%;
+            text-decoration: underline;
+        }
+
+        .slideshow-container {
+            position: relative;
+            height: 700px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .bmw-container {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            justify-content: space-between;
+            z-index: 1;
+        }
+
+        .bmw {
+            margin-right: 250px;
+        }
+
+        .titulobmw {
+            font-family: 'Signature';
+            font-size: 16px;
+            padding-top: 50px;
+        }
+
+        .quadradoazul {
+            position: absolute;
+            right: 150px;
+            margin-top: 65px;
+            background-color: blue;
+            border-radius: 20px 5px 35px 250px;
+            height: 450px;
+            width: 25%;
+            z-index: -1;
+        }
+
+         #logo {
+            width: 200px;
+            height: 200px;
+            margin-top: 255px;
+            position: absolute;
+            right: 190px;
+            z-index: 1;
+            align-items: end;
+         }
+
+        .textobmw p {
+            position: absolute;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: bold;
+            z-index: auto;
+            margin: 275px 0 0 100px;
+            width: 50%;
+            height: 250px;
+            text-align: left;
+        }
+
+        .audi-container {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            justify-content: space-between;
+            z-index: 1;
+        }
+
+        .audi {
+            margin-right: 250px;
+        }
+
+        .tituloaudi {
+            font-family: 'Signature';
+            font-size: 16px;
+            padding-top: 50px;
+        }
+
+        .quadradovermelho {
+            position: absolute;
+            right: 150px;
+            margin-top: 65px;
+            background-color: red;
+            border-radius: 20px 5px 35px 250px;
+            height: 450px;
+            width: 25%;
+            z-index: -1;
+        }
+
+        .logoaudi {
+            width: 200px;
+            height: 200px;
+            margin-top: 255px;
+            position: absolute;
+            right: 190px;
+            z-index: 1;
+            align-items: end;
+         }
+
+        .textoaudi p {
+            position: absolute;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: bold;
+            z-index: auto;
+            margin: 275px 0 0 100px;
+            width: 50%;
+            height: 250px;
+            text-align: left;
+        }
+
+        .slidesbolinha {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .slidesbolinha label {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #fff;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .slidesbolinha label.active {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">Menu</a>
+        <a href="#">Veículos</a>
+        <a href="#">Bancos</a>
+        <a href="#">Motores</a>
+        <a href="#">Quem somos</a>
+        <a href="#">Contato</a>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="slide">
+            <div class="bmw-container">
+                <div class="titulobmw">
+                <h1>BMW E36 1995</h1>
+                </div>
+                <div class="bmw">
+                    <img src="bmwe36.png" alt="BMW E36" width="425px" height="275px">
+                </div>
+            </div>
+            <div class="quadradoazul"></div>
+            <img src="logobmw.png" alt="Logo BMW" id="logo">
+            <div class="textobmw">
+                <p>O BMW M3 chegou ao Brasil pouco depois do seu lançamento, em 1993. Na época as importações independentes
+                    já eram bem comuns, e por isso você encontra modelos de especificação americana e europeia dividindo o
+                    mercado de usados. Se você quer o melhor M3 E36, fique com o europeu — que é mais caro, mas também é
+                    muito mais carro. Além das diferenças estéticas (volante e para-choques), o europeu vinha de fábrica com
+                    286 cv e 32,5 mkgf. O americano era submetido às leis de emissões de poluentes dos EUA, que reduziram a
+                    potência para 243 cv e o torque para 31 mkgf. Na prática a arrancada é a mesma: o americano chega aos
+                    100 km/h em 5,6 segundos enquanto o europeu precisa de 5,4. Mas a velocidade final é significativamente
+                    reduzida a apenas 220 km/h, enquanto o europeu chega aos 250 km/h — o que não faz muita diferença no
+                    Mundo Encantado dos Radares de Trânsito. Em 1995 o BMW M3 parou de ser importado, e só voltou em 1998,
+                    seu último ano de vida, com o renovado motor 3.2 de 321 cv (a 7.400 rpm) e 35,6 mkgf (a 3.250 rpm) e
+                    câmbio automático de seis marchas com trocas manuais como opcional.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="audi-container">
+                <div class="tituloaudi">
+                <h1>Audi R8 2022</h1>
+                </div>
+                <div class="audi">
+                    <img src="audir8.png" alt="Audi R8" width="425px" height="275px">
+                </div>
+            </div>
+            <div class="quadradovermelho"></div>
+            <img src="logoaudi.png" alt="Logo Audi" class="logoaudi">
+            <div class="textoaudi">
+                <p>O Audi R8 já é um carro espetacularmente rápido, mas a preparadora MTM achou que era possível extrair mais
+                    potência do motor V10 de 5.2 litros. O resultado foi um “esportivo extraterrestre” com 802 cv e 78,5 mkgf
+                    (760 cv e 70,5 mkgf na opção anterior). O desempenho da fera é de 0-100 km/h em 2,6 segundos e velocidade
+                    máxima de 339 km/h. E acredite: isso não é uma balela. O MTM R8 R especificação 772 tornou-se o Audi mais
+                    rápido já registrado no famoso circuito de Nürburgring, na Alemanha, em dezembro de 2019. Com o piloto
+                    carismático Marcus Söderlund ao volante, o R8 R gastou apenas 7min08s99 para completar uma volta.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slidesbolinha">
+        <input type="radio" name="radiobtn" id="radio1" checked>
+        <label for="radio1" class="active"></label>
+        <input type="radio" name="radiobtn" id="radio2">
+        <label for="radio2"></label>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slideshow-container .slide');
+        const labels = document.querySelectorAll('.slidesbolinha label');
+
+        let activeSlide = 0;
+
+        const showSlide = (n) => {
+            // desativar slide atual
+            slides[activeSlide].classList.remove('active');
+            labels[activeSlide].classList.remove('active');
+
+            // ativar novo slide
+            slides[n].classList.add('active');
+            labels[n].classList.add('active');
+
+            // atualizar slide ativo
+            activeSlide = n;
+        };
+
+        const nextSlide = () => {
+            let n = activeSlide + 1;
+            if (n >= slides.length) {
+                n = 0;
+            }
+            showSlide(n);
+        };
+
+        setInterval(() => {
+            nextSlide();
+        }, 4000);
+
+        labels.forEach((label, index) => {
+            label.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+    </script>
+</body>
+</html>
